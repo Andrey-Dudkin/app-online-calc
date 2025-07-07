@@ -1,0 +1,223 @@
+.header {
+  width: 100%;
+  min-height: 48px;
+}
+
+.navbar {
+  width: 100%;
+  min-height: 48px;
+  background-color: var(--default-bg-navbar);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+.navbar--fixed {
+  background-color: var(--active-bg-navbar);
+  box-shadow: var(--navbar-shadow);
+}
+
+.navbar__content {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-link {
+  outline: none;
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--main-color);
+  letter-spacing: -0.6px;
+}
+
+.app-online-calc {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-online-calc__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+}
+
+.app-online-calc__title {
+  font-size: clamp(25px, 7vw, 35px);
+  font-weight: 700;
+  text-align: center;
+}
+
+.app-calc {
+  width: clamp(250px, 70vw, 350px);
+  min-height: 325px;
+  background-color: var(--bg-calc);
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  padding: 15px 15px 15px;
+}
+
+.app-calc__display {
+  width: 100%;
+  min-height: 50px;
+  background-color: var(--bg-display);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.app-calc-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.app-calc-btns__flex-row {
+  display: flex;
+  gap: 10px;
+}
+
+.app-calc-btns__btn {
+  width: clamp(36px, 11vw, 56px);
+  height: clamp(36px, 11vw, 56px);
+  font-size: clamp(14px, 4vw, 18px);
+  color: var(--main-color);
+  background-color: var(--bg--btn);
+  box-shadow: var(--btn-shadow);
+  padding: 5px;
+  transition: background-color ease 0.2s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .app-calc-btns__btn:hover {
+    background-color: var(--hover-color);
+  }
+}
+.app-calc-btns__btn:active {
+  background-color: var(--hover-color);
+}
+.app-calc-btns__btn--violet {
+  background-color: var(--accent-color);
+}
+@media (hover: hover) and (pointer: fine) {
+  .app-calc-btns__btn--violet:hover {
+    background-color: var(--hover-color-accent);
+  }
+}
+.app-calc-btns__btn--violet:active {
+  background-color: var(--hover-color-accent);
+}
+
+.app-calc-btns__btn--equal-sign {
+  width: 60%;
+}
+
+.footer {
+  width: 100%;
+  min-height: 48px;
+  background-color: var(--bg-footer);
+}
+
+.footer__container {
+  min-height: 48px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.social {
+  display: flex;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+.social .social__link {
+  color: var(--main-color);
+  transition: color ease 0.2s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .social .social__link:hover {
+    color: var(--accent-color);
+  }
+}
+.social .social__link:active {
+  color: var(--accent-color);
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --main-font: "Inter", sans-serif;
+  --width-container: 1170px;
+  --padding-container: 15px;
+  --main-color: #ffffff;
+  --accent-color: #8000ff;
+  --bg-body: #0d0d0d;
+  --hover-color: rgba(82, 81, 81, 0.4);
+  --hover-color-accent: rgba(176, 120, 232, 0.8);
+  --default-bg-navbar: rgba(22, 22, 22, 0);
+  --active-bg-navbar: rgba(22, 22, 22, 1);
+  --navbar-shadow: 4px 2px 8px rgba(0, 0, 0, 0.2);
+  --menu-icon-color: #ffffff;
+  --bg-calc: #161616;
+  --bg-display: rgba(82, 81, 81, 0.4);
+  --bg--btn: #353333;
+  --btn-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 8px 16px rgba(0, 0, 0, 0.1);
+  --bg-footer: #161616;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--main-font);
+  font-weight: 400;
+  color: var(--main-color);
+  background-color: var(--bg-body);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.container {
+  max-width: calc(var(--width-container) + var(--padding-container) * 2);
+  margin: 0 auto;
+  padding-inline: var(--padding-container);
+}/*# sourceMappingURL=main.css.map */

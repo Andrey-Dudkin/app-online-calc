@@ -1,0 +1,27 @@
+.footer {
+  width: 100%;
+  min-height: 48px;
+  background-color: var(--bg-footer);
+}
+.footer__container {
+  min-height: 48px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.social {
+  display: flex;
+  column-gap: 5px;
+  .social__link {
+    color: var(--main-color);
+    transition: color ease 0.2s;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
+    &:active {
+      color: var(--accent-color);
+    }
+  }
+}
